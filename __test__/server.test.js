@@ -25,4 +25,14 @@ describe('web server', () => {
       })
       .catch(console.error);
   });
+  it('should delete a person',()=>{
+    return mockRequest
+      .delete('/people/1')
+      .then(results => {
+        expect(results.status).toBe(200);
+        expect(results.body.count).toBe(3);
+
+      })
+      .catch(console.error);
+  });
 });
