@@ -14,6 +14,7 @@
 ### Modules
 #### `people-routes.js`
 #### `teams-routes.js`
+#### `logger.js`
 
 ##### Exported Values and Methods
 
@@ -25,7 +26,7 @@ Usage Notes or examples
 
 ### Setup
 #### `.env` requirements
-* `PORT` - Port Number
+* `PORT` - 3000
 * `MONGODB_URI` - URL to the running mongo instance/db
 
 #### Running the app

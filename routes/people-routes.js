@@ -18,6 +18,7 @@ let router = express.Router();
 router.get('/', (req, res, next) => {
   let count = db.people.length;
   let results = db.people;
+  req.str = 'TEST';
   res.json({ count, results });
 });
   
