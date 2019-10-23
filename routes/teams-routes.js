@@ -28,4 +28,22 @@ router.delete('/:id', (req, res, next) => {
     
 });
 
+router.put('/:id', (req, res, next) => {
+  let id = req.params.id;
+  let updatedTeam = req.body;
+  let updatedDb = [];
+  // loop to replace old data with new data
+  db.teams.forEach(team => {
+    if (team.id === id) {
+      updatedDb.push(updatedTeam);
+    } else {
+      updatedDb.push(team);
+    }
+  });
+  db.teams = updatedDb;
+  let record = db.teams.filter(record => record.id === parseInt(id));
+    
+  res.json(db.teams.id[0]);
+});
+
 module.exports = router;
