@@ -35,4 +35,18 @@ describe('web server', () => {
       })
       .catch(console.error);
   });
+  it('should update person', ()=>{
+    return mockRequest
+      .put('/people/1')
+      .send({
+        firstName: 'Test',      lastName: 'Smalls',
+        birthday: new Date('02/13/2020'),
+        team: 1,
+        likes: 'cats'})
+      .then(results => {
+        // expect(results.status).toBe(200);
+        expect(results.body.firstName).toBe('Test');
+
+      });
+  });
 });

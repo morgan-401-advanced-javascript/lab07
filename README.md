@@ -5,15 +5,16 @@
 ### Links and Resources
 * [submission PR](https://github.com/morgan-401-advanced-javascript/lab07/pull/1)
 * [travis](https://www.travis-ci.com/morgan-401-advanced-javascript/lab07)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
+* [front-end](https://lab07mts.herokuapp.com/)
 
 #### Documentation
 * [api docs](http://xyz.com) (API servers)
-* [jsdoc](http://xyz.com) (Server assignments)
+* [jsdoc](./docs/config/) (Server assignments)
 
 ### Modules
-#### `modulename.js`
+#### `people-routes.js`
+#### `teams-routes.js`
+
 ##### Exported Values and Methods
 
 ###### `foo(thing) -> string`
