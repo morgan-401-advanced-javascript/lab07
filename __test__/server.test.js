@@ -30,7 +30,7 @@ describe('web server', () => {
       .delete('/people/1')
       .then(results => {
         expect(results.status).toBe(200);
-        expect(results.body.count).toBe(3);
+        expect(results.body.count).toBe(4);
 
       })
       .catch(console.error);

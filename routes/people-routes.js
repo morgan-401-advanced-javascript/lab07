@@ -84,10 +84,10 @@ router.put('/:id', (req, res, next) => {
 // }
 router.delete('/:id', (req, res, next) => {
   let id = req.params.id;
-  let record = db.people.filter(record => record.id === parseInt(id));
-  let index = db.people.indexOf(record);
+  // filter list to exclude deleted person
+  let deletedPersonList = db.people.filter(person => person.id != id);
+  db.people = deletedPersonList;
   let results = db.people;
-  results.slice(index);
   let count = db.people.length;
   res.json({ count, results });
   
