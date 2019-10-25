@@ -10,7 +10,7 @@ let options = {
       version: '1.0.1',
     },
     host: 'localhost:3000',
-    basePath: '/',
+    basePath: '',
     produces: ['application/json'],
     schemes: ['http'],
     securityDefinitions: {
@@ -19,9 +19,10 @@ let options = {
       },
     },
   },
-  basedir: lib/server.js , //app absolute path
-  files: ['./*.js'], //Path to the API handle folder
+  basedir: '/Users/morgantatums/codefellows/401/labs/lab07/lib', //app absolute path
+
+  files: ['../routes/*.js', './*.js'], //Path to the API handle folder
 };
 expressSwagger(options);
 // start up a specific standalone swagger server on a specific port
-app.listen(3100);
+app.listen(3500);
